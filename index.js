@@ -1,4 +1,4 @@
-const questionContainer = document.querySelector(".card-body")
+const questionContainer = document.querySelector(".Test")
 
 var questionData = {
   first : 0,
@@ -42,14 +42,25 @@ const Start = () =>{
     }
     
     shuffle(arr);
-    const newQuestion = `<h1 class="card-title">${questionData.first} x  ${questionData.second}</h1>
+    const newQuestion = `<div class="main">
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+    <h1 class="card-title">${questionData.first} x  ${questionData.second}</h1>
     <button class="options"  id="option1" value=${arr[1]} onclick =checkAnswer(this.id)><h6 >&nbsp;A.&nbsp;&nbsp;&nbsp;${arr[1]}</h6></button>
       <button class="options"  id="option2" value=${arr[2]} onclick =checkAnswer(this.id)><h6 >&nbsp;B.&nbsp;&nbsp;&nbsp;${arr[2]}</h6></button>
         <button class="options"  id="option3" value=${arr[3]} onclick =checkAnswer(this.id)><h6 >&nbsp;C.&nbsp;&nbsp;&nbsp;${arr[3]}</h6></button>
-          <button class="options"  id="option4" value=${arr[0]} onclick =checkAnswer(this.id)><h6 >&nbsp;D.&nbsp;&nbsp;&nbsp;${arr[0]}</h6></button>`
+          <button class="options"  id="option4" value=${arr[0]} onclick =checkAnswer(this.id)><h6 >&nbsp;D.&nbsp;&nbsp;&nbsp;${arr[0]}</h6></button>
+          </div>
+          <h6 id="answer" class="text-center"></h1>
+          <button class="Next px-3 py-1 border-0 rounded mx-auto"
+        onclick=Start()>Next</button>
+          
+        </div>
+      </div>`
 
 //adding new question
- questionContainer.innerHTML = newQuestion; 
+ questionContainer.innerHTML = newQuestion;
+ document.getElementById("answer").innerHTML = ""; 
 }
 
 
@@ -63,6 +74,6 @@ const checkAnswer = (clicked_id) => {
   }
   else
   {
-    document.getElementById("answer").innerHTML = `Try Again Correct Answer is ${rightAnswer}`;
+    document.getElementById("answer").innerHTML = `Oops! The Correct Answer is ${rightAnswer}`;
   }
 } 
