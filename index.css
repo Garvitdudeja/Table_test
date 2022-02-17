@@ -1,0 +1,93 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Akaya Telivigala', cursive;
+font-family: 'Dancing Script', cursive;
+font-family: 'Lobster', cursive;
+font-family: 'Roboto', sans-serif;
+}
+
+.navbar { 
+    position: sticky;
+    top: 0;
+    background-color: aquamarine;
+    z-index: 3;
+}
+
+
+.header{
+    padding: rem;
+    text-shadow: 2px;
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.logo_container {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    margin: auto;
+    padding: auto;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.logo {
+    width: 3rem;
+}
+
+.hero_container {
+    margin-bottom: 0.5rem;
+    text-align: center;
+    font-weight: 000;
+    font-family: 'Dancing Script', cursive;
+}
+
+.main {
+    display: flex;
+    margin: auto;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+.card-body {
+    text-align: center;
+}
+
+.card {
+    padding: .8rem;
+    border-radius: 4px;
+    background-color: white;
+    border: 2px solid rgb(218, 212, 212);
+}
+
+.options{
+    text-align: start;
+    margin: .2rem;
+    padding: .3rem;
+    width: 15rem;
+    border-radius: 4px;
+    background-color: white;
+    border: 2px solid rgb(243, 236, 195);
+    font-size: larger;
+    font-weight: 400;
+}
+
+button:active {
+    background-color: rgb(246, 255, 115);
+}
+
+button:hover {
+    pointer-events: painted
+}
+
+.Start {
+    max-width: 32%;
+}
+
+.Next {
+    max-width: 32%;
+    background-color: chocolate;
+}
