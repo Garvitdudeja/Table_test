@@ -1,5 +1,5 @@
-const questionContainer = document.querySelector(".Test")
-
+const questionContainer = document.querySelector(".Test");
+var correct = 0, incorrect = 0;
 var questionData = {
   first : 0,
   second: 0,
@@ -44,6 +44,9 @@ const Start = () =>{
     shuffle(arr);
     const newQuestion = `<div class="main">
     <div class="card" style="width: 18rem;">
+    
+    <h6 style="color:green;">Correct : ${correct}</h6>
+    <h6 style="color:red;">InCorrect : ${incorrect}</h6>
       <div class="card-body">
     <h1 class="card-title">${questionData.first} x  ${questionData.second}</h1>
     <button class="options"  id="option1" value=${arr[1]} onclick =checkAnswer(this.id)><h6 >&nbsp;A.&nbsp;&nbsp;&nbsp;${arr[1]}</h6></button>
@@ -70,10 +73,16 @@ const checkAnswer = (clicked_id) => {
   console.log(click);
   if(rightAnswer == click)
   {
-    document.getElementById("answer").innerHTML = "Great Work Your Answer is correct"
+    document.getElementById("answer").innerHTML = "Great Work Your Answer is correct";
+    correct += 1; 
+    setTimeout(Start,3000)
   }
   else
   {
     document.getElementById("answer").innerHTML = `Oops! The Correct Answer is ${rightAnswer}`;
+    incorrect += 1;
+    setTimeout(Start,6000)
   }
+  console.log(correct, incorrect);
 } 
+console.log(correct, incorrect);
