@@ -91,3 +91,7 @@ button:hover {
     max-width: 32%;
     background-color: chocolate;
 }
+
+.result {
+    text-align: center;
+}
